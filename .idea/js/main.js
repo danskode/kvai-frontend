@@ -3,8 +3,20 @@ const userInput = document.getElementById('user-input');
 const chatBox = document.getElementById('chat-box');
 const personaSelect = document.getElementById('persona-select');
 
+// document.onload(chatBox.innerHTML = `<div class="message user-message"><strong><i>kv</i>AI:</strong> ... dit svar kommer her ...</div>`);
+
+
+
 sendButton.addEventListener('click', () => {
-    const userMessage = userInput.value;
+    // Saner input ved at fjerne farlige tegn
+    const sanitizeInput = (input) => {
+        const div = document.createElement('div'); // Opret et dummy DOM-element
+        div.innerText = input; // Sæt inputtet i DOM-elementet som tekst
+        return div.innerHTML; // Hent den rensede tekst som HTML-sikker streng
+    };
+
+    // Trim inputtet for whitespace og saner det
+    const userMessage = sanitizeInput(userInput.value.trim());
     const selectedPersona = personaSelect.value;
 
     if (userMessage) {
