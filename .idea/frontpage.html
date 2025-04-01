@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KVAI✌️ bli' klar til #kv25 med lidt ai-magi</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Link til CSS-fil -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -28,49 +28,53 @@
     </div>
 </header>
 
-<div class="chat-container">
-    <h1>Chat med 🤖-kandidaterne til #kv25</h1>
+<main>
 
-    <label for="persona-select">Vælg din valgkreds</label>
-    <select id="persona-select">
-        <option value="persona1">København</option>
-        <option value="persona2">Roskilde</option>
-        <option value="persona3">Aarhus</option>
-    </select>
+    <div class="chat-container">
+        <h1>Chat med 🤖-kandidaterne til #kv25</h1>
 
-    <label for="persona-select">Vælg et parti</label>
-    <select id="persona-select">
-        <option value="party1">Socialdemokratiet 🥀</option>
-        <option value="party2">Venstre 🚜</option>
-        <option value="party3">Konservative 🫡</option>
-        <option value="party4">SF 😶‍🌫️</option>
-        <option value="party5">DF ⛔</option>
-        <option value="party6">Moderaterne ↕️️</option>
-        <option value="party7">Enhedslisten🟥</option>
-        <option value="party8">Radikale Venstre ↔️</option>
-        <option value="party9">Borgernes Parti 🤨</option>
-        <option value="party10">Danmarks Demokraterne 🐖</option>
-        <option value="party11">Liberal Alliance 🤑</option>
-        <option value="party12">Alternativet 🥗</option>
-        <option value="party13">Lokale lister og løsgængere 🤙</option>
-    </select>
+        <label for="persona-select">Vælg din valgkreds</label>
+        <select id="persona-select">
+            <option value="persona1">København</option>
+            <option value="persona2">Roskilde</option>
+            <option value="persona3">Aarhus</option>
+        </select>
 
-    <label for="persona-select">Vælg en 🤖-kandidat, du vil chatte lokalpolitik med?</label>
-    <select id="persona-select">
-         <option value="persona1">Mia Nygaard ↔️</option>
-         <option value="persona2">Jakob Næsager 🫡</option>
-         <option value="persona3">Pernille Rosenkrandz-Theil 🥀</option>
-    </select>
+        <label for="persona-select">Vælg et parti</label>
+        <select id="persona-select">
+            <option value="party1">Socialdemokratiet 🥀</option>
+            <option value="party2">Venstre 🚜</option>
+            <option value="party3">Konservative 🫡</option>
+            <option value="party4">SF 😶‍🌫️</option>
+            <option value="party5">DF ⛔</option>
+            <option value="party6">Moderaterne ↕️️</option>
+            <option value="party7">Enhedslisten🟥</option>
+            <option value="party8">Radikale Venstre ↔️</option>
+            <option value="party9">Borgernes Parti 🤨</option>
+            <option value="party10">Danmarks Demokraterne 🐖</option>
+            <option value="party11">Liberal Alliance 🤑</option>
+            <option value="party12">Alternativet 🥗</option>
+            <option value="party13">Lokale lister og løsgængere 🤙</option>
+        </select>
 
-    <div class="chat-box" id="chat-box">
-            <!-- Chatbeskeder vil blive vist her -->
+        <label for="persona-select">Vælg en 🤖-kandidat, du vil chatte lokalpolitik med?</label>
+        <select id="persona-select">
+             <option value="persona1">Mia Nygaard ↔️</option>
+             <option value="persona2">Jakob Næsager 🫡</option>
+             <option value="persona3">Pernille Rosenkrandz-Theil 🥀</option>
+        </select>
+
+        <div class="chat-box" id="chat-box">
+                <!-- Chatbeskeder vil blive vist her -->
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Skriv dit spørgsmål her...">
+            <button id="send-button">Send</button>
+        </div>
     </div>
 
-    <div class="input-area">
-        <input type="text" id="user-input" placeholder="Skriv dit spørgsmål her...">
-        <button id="send-button">Send</button>
-    </div>
-</div>
+</main>
 
 <footer>
     <div class="footer-container">
@@ -82,6 +86,6 @@
 </footer>
 
 
-<script src="js/main.js"></script> <!-- Link til JS-fil -->
+<script src="js/main.js"></script>
 </body>
 </html>
