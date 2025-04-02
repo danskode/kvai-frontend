@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex: 1; /* Fylder resterende plads mellem header og footer */
+    min-height: 0; /* Undgå overstrømning */
+    padding: 2rem;
+    overflow-y: auto; /* Scroll, hvis indholdet vokser for stort */
+    margin: 0 auto; /* Centrerer indholdet vandret */
+    max-width: 1200px;
+}
+
+#politicians-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsivt gitterlayout */
+    gap: 20px; /* Afstand mellem elementerne */
+}
+
+.politician {
+    display: flex;
+    flex-direction: column; /* Juster til column for at placere knappen under billedet */
+    align-items: center; /* Centrerer både billede og knap */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.politician:hover {
+    transform: translateY(-5px); /* Let hævning ved hover */
+}
+
+.politician img {
+    width: 150px;  /* Juster billedstørrelsen, så de er ens */
+    height: 150px; /* Gør højden lig med bredden */
+    object-fit: cover; /* Sørger for at billedet fylder uden at blive forvrænget */
+    margin-bottom: 10px; /* Placerer lidt afstand mellem billede og knap */
+    border-radius: 50%; /* Gør billederne runde */
+}
+
+.politician button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.politician button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Sørger for, at footeren placeres korrekt i bunden */
+    width: 100%;
+    position: relative; /* Fjern "fixed" for at undgå overlap */
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+footer .footer-container ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+footer .footer-container ul li:first-child {
+    margin-left: 0;
+}
+
+footer .footer-container a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer .footer-container a:hover {
+    color: #ccc;
+}
