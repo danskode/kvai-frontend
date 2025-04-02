@@ -30,3 +30,10 @@ sendButton.addEventListener('click', () => {
         chatBox.scrollTop = chatBox.scrollHeight; // Rul til bunden af chatboksen
     }
 });
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const navUl = document.querySelector('nav ul');
+
+hamburgerMenu.addEventListener('click', () => {
+    navUl.style.display = navUl.style.display === 'block' ? 'none' : 'block';
+});
