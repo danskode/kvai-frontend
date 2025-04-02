@@ -79,19 +79,23 @@ nav {
 }
 
 main {
-    flex: 1; /* Fylder resterende plads mellem header og footer */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    flex: 1; /* Fylder resterende plads mellem header og footer !*/
     min-height: 0; /* Undgå overstrømning */
 
     padding: 1rem;
     overflow-y: auto; /* Scroll, hvis indholdet vokser for stort */
-    margin: 0 auto; /* Centrerer indholdet vandret */
-    width: 100%;
-    box-sizing: border-box;
+    margin: 0 auto; /* Centrerer indholdet vandret*/
+    max-width: 1200px;
 }
 
 .chat-container {
-    max-width: 1200px;
-    margin: 40px auto;
+    width: 65%;
+    margin: 0;
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
@@ -200,6 +204,17 @@ select {
     color: #999;
 }
 
+.side-kick-container {
+    width: 25%;
+    margin: 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+
 footer {
     background-color: #333;
     color: #fff;
@@ -283,6 +298,7 @@ footer .footer-container a:hover {
 
     .chat-container {
         padding: 1rem;
+        width: 100%;
     }
 
     .input-area {
@@ -308,6 +324,12 @@ footer .footer-container a:hover {
         width: 100%; /* Knap fylder hele bredden på mindre skærme */
         margin: 0;
     }
+
+    .side-kick-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
 }
 
 
