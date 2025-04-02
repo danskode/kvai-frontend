@@ -194,6 +194,12 @@ select {
     border-radius: 5px;
 }
 
+#chat-box-disclaimer {
+    padding-top: 2.5rem;
+    font-size: 0.8rem;
+    color: #999;
+}
+
 footer {
     background-color: #333;
     color: #fff;
