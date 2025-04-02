@@ -29,14 +29,17 @@ header .mainHeading {
     flex-direction: column;
 }
 
-header .topHeading {
-    font-size: 24px;
-    font-weight: bold;
+header .mainHeading h1 {
+    font-size: 2rem;
 }
 
 header .subHeading{
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: normal;
+}
+
+header .subHeading p {
+    margin: 0;
 }
 
 header nav ul {
@@ -44,6 +47,7 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    font-size: 1rem;
 }
 
 header nav ul li {
@@ -103,7 +107,7 @@ main {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
@@ -118,6 +122,7 @@ select {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .chat-box {
@@ -133,6 +138,7 @@ select {
 
 .message {
     margin: 5px 0;
+    font-size: 1rem;
 }
 
 .user-message {
