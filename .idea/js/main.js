@@ -31,6 +31,14 @@ sendButton.addEventListener('click', () => {
     }
 });
 
+// Lyt efter 'Enter'-tasten i inputfeltet
+userInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') { // Eller event.keyCode === 13 for ældre browsere
+        event.preventDefault(); // Forhindrer standard opførsel (fx nyt linjeskift)
+        sendButton.click(); // Simulerer et klik på send-knappen
+    }
+});
+
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navUl = document.querySelector('nav ul');
 
