@@ -87,7 +87,7 @@ main {
     flex: 1; /* Fylder resterende plads mellem header og footer !*/
     min-height: 0; /* Undgå overstrømning */
 
-    padding: 1rem;
+    padding: 2rem;
     overflow-y: auto; /* Scroll, hvis indholdet vokser for stort */
     margin: 0 auto; /* Centrerer indholdet vandret*/
     max-width: 1200px;
