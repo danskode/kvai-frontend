@@ -22,6 +22,7 @@ header .container {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header .mainHeading {
@@ -281,18 +282,52 @@ footer .footer-container a:hover {
 
 @media (max-width: 768px) {
 
+    header .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .mainHeading {
+        width: 100%;
+    }
+
+    header .mainHeading h1 {
+        text-align: center;
+    }
+
+    header .subHeading p {
+        text-align: center;
+    }
+
     header nav {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        align-items: center;
     }
 
     header nav ul {
         display: none;
     }
 
+    header nav ul li {
+        display: block;
+        color: red;
+    }
+
+    .nav-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+    }
+
     .hamburger-menu {
+        width: 100%;
         display: block;
         cursor: pointer;
+        padding: 1rem;
     }
 
     .hamburger-menu div {
