@@ -371,6 +371,24 @@ footer .footer-container a:hover {
         width: 100%;
     }
 
+    .loading-message .dots {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: dots-animation 1.5s steps(3, end) infinite;
+    }
+
+    @keyframes dots-animation {
+        0% { content: "."; }
+        33% { content: ".."; }
+        66% { content: "..."; }
+    }
+
+    .loading-message {
+        font-style: italic;
+        color: grey;
+    }
+
 }
 
 

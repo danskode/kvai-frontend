@@ -11,6 +11,18 @@ sendButton.addEventListener('click', async () => {
         chatBox.innerHTML += `<div class="message user-message"><strong>Du:</strong> ${userMessage}</div>`;
         userInput.value = '';
 
+        const loadingMessage = document.createElement('div');
+        loadingMessage.classList.add('message', 'loading-message');
+        loadingMessage.innerHTML = `<strong>${selectedPolitician}:</strong> <span class="dots">...</span>`;
+        chatBox.appendChild(loadingMessage);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        let dotCount = 1;
+        const dotAnimation = setInterval(() => {
+            dotCount = (dotCount % 3) + 1;
+            loadingMessage.querySelector('.dots').textContent = '.'.repeat(dotCount);
+        }, 500);
+
         try {
             const response = await fetch('http://localhost:8080/api/chat', {
                 method: 'POST',
@@ -20,6 +32,9 @@ sendButton.addEventListener('click', async () => {
                     politician: selectedPolitician // Sender politikeren med i requesten
                 })
             });
+
+            clearInterval(dotAnimation);
+            chatBox.removeChild(loadingMessage);
 
             if (response.ok) {
                 const data = await response.json();
