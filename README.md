@@ -1,6 +1,6 @@
 # KVAI – Kandidatvalg AI
 
-![Alt Text](/public/images/kv25ai.gif)
+![GIF to illustrate the system in action](/public/images/kv25ai.gif)
 
 Dette projekt består af en **frontend** (plain JavaScript) og en **backend** (Java/Spring Boot), som tilsammen danner en platform, hvor vælgere kan chatte med digitale tvillinger af kandidaterne til det kommende lokalvalg i Danmark #kv25.  
 
